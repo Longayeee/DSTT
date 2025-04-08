@@ -50,10 +50,4 @@ index = 0
 result = []
 
 
-dajwhdigawd
-
-
-awjduahwdh
-
 #Yeu cau f:
-dajwhdyuawyidg
