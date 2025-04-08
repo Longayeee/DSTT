@@ -67,5 +67,24 @@ for row in A:
         result.append(row)
 print("Dap an cau e")
 print(np.array(result)) 
+# rs = [];
+# maxCount = 0;
+# for row in A:
+#     count = 0
+#     for el in row:
+#         isPrime = True
+#         for i in range(2, int(el ** 0.5) + 1):
+#             if el % i == 0:
+#                 isPrime = False
+#                 break
+#         if isPrime:
+#             count+=1
+#     if count > maxCount:
+#         maxCount = count
+#         rs = [row];
+#     elif count == maxCount:
+#         rs += [row];
+
+print(np.array(rs))
 
 #Yeu cau f:
