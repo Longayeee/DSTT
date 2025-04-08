@@ -48,17 +48,11 @@ print(np.array(arr_primenum))
 print("Yeu cau e")
 index = 0
 result = []
-nihiqywaddawd
-awd
-awd
-awd
-awda
-WindowsErrorwdaw
-D
 
 
+dajwhdigawd
 
 
-
+awjduahwdh
 
 #Yeu cau f:
