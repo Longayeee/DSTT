@@ -1,16 +1,18 @@
+
 import numpy as np
-A= np.random.randint(1,101,size = (10,10))
-B= np.random.randint(1,21,size = (2,10))
-C= np.random.randint(1,21,size = (10,2))
-print ("MA TRAN A: \n",A)
-print ("MA TRAN B: \n",B)
-print ("MA TRAN C: \n",C)
+
+A = np.random.randint(1,101,size = (10,10))
+B = np.random.randint(1,21,size = (2,10))
+C = np.random.randint(1,21,size = (10,2))
+print("MA TRAN A: \n",A)
+print("MA TRAN B: \n",B)
+print("MA TRAN C: \n",C)
 
 #Yeu cau a: Tinh bieu thuc va in ra man hinh console
 print("YEU CAU a")
 D = A + A.T + np.dot(C , B)+ np.dot((B.T),(C.T))
-print ("Dap an cau a: \n")
-print ("A + A.T+CB+(B.T)*(C.T)= \n",D)
+print("Dap an cau a: \n")
+print("A + A.T+CB+(B.T)*(C.T)= \n",D)
 
 #Yeu cau b: Tinh bieu thuc dang phan so co luy thua va in ra man hinh console
 print("Yeu cau b")
