@@ -48,6 +48,22 @@ print(np.array(arr_primenum))
 print("Yeu cau e")
 index = 0
 result = []
-
+for row in A:
+    save = []
+    for num_n in row:
+        if num_n > 1:
+            for i in range (2,int (num_n**(1/2)+1)):
+                if num_n % i == 0:
+                    break
+            else: 
+                save.append(num_n)
+    count = len(save)
+    if index < count:
+        index = count
+        result = [row]
+    elif index == count:
+        result.append(row)
+print("Dap an cau e")
+print(np.array(result)) 
 
 #Yeu cau f:
