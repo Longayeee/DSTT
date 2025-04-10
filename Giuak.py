@@ -1,4 +1,3 @@
-
 import numpy as np
 
 A = np.random.randint(1,101,size = (10,10))
@@ -18,35 +17,36 @@ print("A + A.T+CB+(B.T)*(C.T)= \n",D)
 print("Yeu cau b")
 E = 0
 for i in range(1,11):
-    E += (A/(9+i))**i
-print ("Dap an cau b: ")
-print (E)
+    result += ( A / (9 + i) ) ** i
+print("Dap an cau b: ")
+print(result)
 
 #Yeu cau c: Luu cac so le cua ma tran thanh 1 vecto moi va in ra man hinh console
 print("Yeu cau c")
-arr_oldnum = []
+arrOfOdd= []
 for row in A:
     for num in row:
         if num % 2 != 0:
-            arr_oldnum.append(num)
+            arrOfOdd.append(num)
 print("Dap an cau C: ")
-print(np.array(arr_oldnum))
+print(np.array(arrOfOdd))
 
 #Yeu cau d:Luu cac so nguyen to cua ma tran thanh 1 vecto moi va in ra man hinh console
 print("Yeu cau d")
-arr_primenum = []
+arrOfPrimes = []
 for row in A:
-    for n in row:
-        if n > 1:
-            for i in range (2,int (n**(1/2)+1)):
-                if n % i == 0:
+    for num in row:
+        if num > 1:
+            for i in range (2,int(num ** 0.5)  + 1):
+                if num % i == 0:
                     break
             else: 
-                arr_primenum.append(n)
+                arrOfPrimes.append(num)
 print("Dap an cau D: ")
-print(np.array(arr_primenum))
+print(np.array(arrOfPrimes))
 
 #Yeu cau e: Tim hang co nhieu so nguyen to nhat va in ra man hinh console
+# A = [[2,2,2,1,2],[1,2,2,1,2],[2,2,2,1,2]]
 print("Yeu cau e")
 index = 0
 result = []
@@ -91,6 +91,4 @@ for row in A:
 print("Dap an cau f:")
 print(np.array(result_odd))
 
-
-
-        
+#Yeu cau f:
