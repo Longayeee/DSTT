@@ -10,18 +10,17 @@ print("MA TRAN C: \n",C)
 
 #Yeu cau a: Tinh bieu thuc va in ra man hinh console
 print("YEU CAU a")
-result = 0
-result = A + A.T + np.dot(C , B)+ np.dot((B.T),(C.T))
+D = A + A.T + np.dot(C , B)+ np.dot((B.T),(C.T))
 print("Dap an cau a: \n")
-print("A + A.T+CB+(B.T)*(C.T)= \n",result)
+print("A + A.T+CB+(B.T)*(C.T)= \n",D)
 
 #Yeu cau b: Tinh bieu thuc dang phan so co luy thua va in ra man hinh console
 print("Yeu cau b")
-result = 0
+E = 0
 for i in range(1,11):
-    result += (A/(9+i))**i
+    E += (A/(9+i))**i
 print ("Dap an cau b: ")
-print (result)
+print (E)
 
 #Yeu cau c: Luu cac so le cua ma tran thanh 1 vecto moi va in ra man hinh console
 print("Yeu cau c")
@@ -89,7 +88,7 @@ for row in A:
         result_odd = [row]
     elif index == count:
         result_odd += row
-print("Dap an cau f: \n")
+print("Dap an cau f:")
 print(np.array(result_odd))
 
 
