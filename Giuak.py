@@ -9,13 +9,14 @@ print("MA TRAN C: \n",C)
 
 #Yeu cau a: Tinh bieu thuc va in ra man hinh console
 print("YEU CAU a")
-D = A + A.T + np.dot(C , B)+ np.dot((B.T),(C.T))
+result = 0
+result = A + A.T + np.dot(C , B)+ np.dot((B.T),(C.T))
 print("Dap an cau a: \n")
-print("A + A.T+CB+(B.T)*(C.T)= \n",D)
+print(result)
 
 #Yeu cau b: Tinh bieu thuc dang phan so co luy thua va in ra man hinh console
 print("Yeu cau b")
-E = 0
+result = 0
 for i in range(1,11):
     result += ( A / (9 + i) ) ** i
 print("Dap an cau b: ")
@@ -68,27 +69,23 @@ for row in A:
 print("Dap an cau e")
 print(np.array(result)) 
 
-#Yeu cau f: 
-result_odd = []
-index = 0
-for row in A:
-    odd = []
-    count = 0
-    for num in row:
-        if num % 2 != 0:
-            odd.append(num)
-        else:
-            if count < len(odd):
-                count = len(odd)
-            odd = []
-    if count < len(odd):
-        count = len(odd)
-    if index < count:
-        index = count 
-        result_odd = [row]
-    elif index == count:
-        result_odd += row
-print("Dap an cau f:")
-print(np.array(result_odd))
+# rs = [];
+# maxCount = 0;
+# for row in A:
+#     count = 0
+#     for el in row:
+#         isPrime = el > 1
+#         for i in range(2, int(el ** 0.5) + 1):
+#             if el % i == 0:
+#                 isPrime = False
+#                 break
+#         if isPrime:
+#             count+=1
+#     if count > maxCount:
+#         maxCount = count
+#         rs = [row];
+#     elif count == maxCount:
+#         rs.append(row);
+# print(np.array(rs))
 
 #Yeu cau f:
