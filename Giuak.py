@@ -9,6 +9,7 @@ print("MA TRAN C: \n",C)
 
 #Yeu cau a: Tinh bieu thuc va in ra man hinh console
 print("YEU CAU a")
+result = 0
 result = A + A.T + np.dot(C , B)+ np.dot((B.T),(C.T))
 print("Dap an cau a: \n")
 print(result)
@@ -33,17 +34,17 @@ print(np.array(arrOfOdd))
 
 #Yeu cau d:Luu cac so nguyen to cua ma tran thanh 1 vecto moi va in ra man hinh console
 print("Yeu cau d")
-arr_primenum = []
+arrOfPrimes = []
 for row in A:
-    for n in row:
-        if n > 1:
-            for i in range (2,int(n ** 0.5)  + 1):
-                if n % i == 0:
+    for num in row:
+        if num > 1:
+            for i in range (2,int(num ** 0.5)  + 1):
+                if num % i == 0:
                     break
             else: 
-                arr_primenum.append(n)
+                arrOfPrimes.append(num)
 print("Dap an cau D: ")
-print(np.array(arr_primenum))
+print(np.array(arrOfPrimes))
 
 #Yeu cau e: Tim hang co nhieu so nguyen to nhat va in ra man hinh console
 # A = [[2,2,2,1,2],[1,2,2,1,2],[2,2,2,1,2]]
