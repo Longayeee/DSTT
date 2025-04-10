@@ -1,4 +1,3 @@
-
 import numpy as np
 
 A = np.random.randint(1,101,size = (10,10))
@@ -10,27 +9,27 @@ print("MA TRAN C: \n",C)
 
 #Yeu cau a: Tinh bieu thuc va in ra man hinh console
 print("YEU CAU a")
-D = A + A.T + np.dot(C , B)+ np.dot((B.T),(C.T))
+result = A + A.T + np.dot(C , B)+ np.dot((B.T),(C.T))
 print("Dap an cau a: \n")
-print("A + A.T+CB+(B.T)*(C.T)= \n",D)
+print(result)
 
 #Yeu cau b: Tinh bieu thuc dang phan so co luy thua va in ra man hinh console
 print("Yeu cau b")
-E = 0
+result = 0
 for i in range(1,11):
-    E += (A/(9+i))**i
-print ("Dap an cau b: ")
-print (E)
+    result += ( A / (9 + i) ) ** i
+print("Dap an cau b: ")
+print(result)
 
 #Yeu cau c: Luu cac so le cua ma tran thanh 1 vecto moi va in ra man hinh console
 print("Yeu cau c")
-arr_oldnum = []
+arrOfOdd= []
 for row in A:
     for num in row:
         if num % 2 != 0:
-            arr_oldnum.append(num)
+            arrOfOdd.append(num)
 print("Dap an cau C: ")
-print(np.array(arr_oldnum))
+print(np.array(arrOfOdd))
 
 #Yeu cau d:Luu cac so nguyen to cua ma tran thanh 1 vecto moi va in ra man hinh console
 print("Yeu cau d")
@@ -38,7 +37,7 @@ arr_primenum = []
 for row in A:
     for n in row:
         if n > 1:
-            for i in range (2,int (n**(1/2)+1)):
+            for i in range (2,int(n ** 0.5)  + 1):
                 if n % i == 0:
                     break
             else: 
@@ -47,6 +46,7 @@ print("Dap an cau D: ")
 print(np.array(arr_primenum))
 
 #Yeu cau e: Tim hang co nhieu so nguyen to nhat va in ra man hinh console
+# A = [[2,2,2,1,2],[1,2,2,1,2],[2,2,2,1,2]]
 print("Yeu cau e")
 index = 0
 result = []
@@ -67,12 +67,13 @@ for row in A:
         result.append(row)
 print("Dap an cau e")
 print(np.array(result)) 
+
 # rs = [];
 # maxCount = 0;
 # for row in A:
 #     count = 0
 #     for el in row:
-#         isPrime = True
+#         isPrime = el > 1
 #         for i in range(2, int(el ** 0.5) + 1):
 #             if el % i == 0:
 #                 isPrime = False
@@ -83,8 +84,7 @@ print(np.array(result))
 #         maxCount = count
 #         rs = [row];
 #     elif count == maxCount:
-#         rs += [row];
-
-print(np.array(rs))
+#         rs.append(row);
+# print(np.array(rs))
 
 #Yeu cau f:
