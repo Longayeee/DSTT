@@ -68,23 +68,27 @@ for row in A:
 print("Dap an cau e")
 print(np.array(result)) 
 
-# rs = [];
-# maxCount = 0;
-# for row in A:
-#     count = 0
-#     for el in row:
-#         isPrime = el > 1
-#         for i in range(2, int(el ** 0.5) + 1):
-#             if el % i == 0:
-#                 isPrime = False
-#                 break
-#         if isPrime:
-#             count+=1
-#     if count > maxCount:
-#         maxCount = count
-#         rs = [row];
-#     elif count == maxCount:
-#         rs.append(row);
-# print(np.array(rs))
-
-#Yeu cau f:
+#yeu cau f
+index = 0
+result_odd = []
+for row in A:
+    odd_arr = []
+    count = 0
+    for num in row:
+        if num % 2 != 0:
+            odd_arr.append(num)
+        else:
+            if count < len(odd_arr):
+                count = len(odd_arr)
+            
+            odd_arr = []
+    if count < len(odd_arr):
+        count = len(odd_arr)
+        result_odd = [row]
+    if(index < count):
+        index = count
+        result_odd = [row]
+    elif index == count:
+        result_odd.append(row) 
+print("Dap an cau f")
+print(np.array(result_odd))
