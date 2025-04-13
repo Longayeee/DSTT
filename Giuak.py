@@ -73,23 +73,14 @@ print(np.array(result))
 index = 0
 result_odd = []
 for row in A:
-    odd_arr = []
     count = 0
     for num in row:
         if num % 2 != 0:
-            odd_arr.append(num)
-        else:
-            if count < len(odd_arr):
-                count = len(odd_arr)
-            
-            odd_arr = []
-    if count < len(odd_arr):
-        count = len(odd_arr)
-        result_odd = [row]
-    if(index < count):
+            count += 1
+    if count > index:
         index = count
         result_odd = [row]
-    elif index == count:
-        result_odd.append(row) 
+    elif count == index:
+        result_odd.append(row)
 print("Dap an cau f")
 print(np.array(result_odd))
