@@ -1,15 +1,14 @@
 import numpy as np
 
-A = np.random.randint(1,101,size = (10,10))
-B = np.random.randint(1,21,size = (2,10))
-C = np.random.randint(1,21,size = (10,2))
+A = np.random.randint(1,101,(10,10))
+B = np.random.randint(1,21,(2,10))
+C = np.random.randint(1,21,(10,2))
 print("MA TRAN A: \n",A)
 print("MA TRAN B: \n",B)
 print("MA TRAN C: \n",C)
 
 #Yeu cau a: Tinh bieu thuc va in ra man hinh console
 print("YEU CAU a")
-result = 0
 result = A + A.T + np.dot(C , B)+ np.dot((B.T),(C.T))
 print("Dap an cau a: \n")
 print(result)
