@@ -7,13 +7,13 @@ print("MA TRAN A: \n",A)
 print("MA TRAN B: \n",B)
 print("MA TRAN C: \n",C)
 
-#Yeu cau a: Tinh bieu thuc va in ra man hinh console
+#Yeu cau a
 print("YEU CAU a")
 result = A + A.T + np.dot(C , B)+ np.dot((B.T),(C.T))
 print("Dap an cau a: \n")
 print(result)
 
-#Yeu cau b: Tinh bieu thuc dang phan so co luy thua va in ra man hinh console
+#Yeu cau b
 print("Yeu cau b")
 result = 0
 for i in range(1,11):
@@ -21,7 +21,7 @@ for i in range(1,11):
 print("Dap an cau b: ")
 print(result)
 
-#Yeu cau c: Luu cac so le cua ma tran thanh 1 vecto moi va in ra man hinh console
+#Yeu cau c
 print("Yeu cau c")
 arrOfOdd= []
 for row in A:
@@ -31,7 +31,7 @@ for row in A:
 print("Dap an cau C: ")
 print(np.array(arrOfOdd))
 
-#Yeu cau d:Luu cac so nguyen to cua ma tran thanh 1 vecto moi va in ra man hinh console
+#Yeu cau d
 print("Yeu cau d")
 arrOfPrimes = []
 for row in A:
@@ -45,41 +45,40 @@ for row in A:
 print("Dap an cau D: ")
 print(np.array(arrOfPrimes))
 
-#Yeu cau e: Tim hang co nhieu so nguyen to nhat va in ra man hinh console
-# A = [[2,2,2,1,2],[1,2,2,1,2],[2,2,2,1,2]]
+#Yeu cau e
 print("Yeu cau e")
-index = 0
+maxCount = 0
 result = []
 for row in A:
-    save = []
-    for num_n in row:
-        if num_n > 1:
-            for i in range (2,int (num_n**(1/2)+1)):
-                if num_n % i == 0:
+    count = 0
+    for num in row:
+        if num > 1:
+            for i in range (2,int(num ** 0.5)  + 1):
+                if num % i == 0:
                     break
             else: 
-                save.append(num_n)
-    count = len(save)
-    if index < count:
-        index = count
+                count += 1
+    if count > maxCount:
+        maxCount = count
         result = [row]
-    elif index == count:
+    elif count == maxCount:
         result.append(row)
 print("Dap an cau e")
 print(np.array(result)) 
 
 #yeu cau f
-index = 0
-result_odd = []
+print("Yeu cau f")
+maxCountOdd = 0
+resultOdd = []
 for row in A:
     count = 0
     for num in row:
         if num % 2 != 0:
-            count += 1
-    if count > index:
-        index = count
-        result_odd = [row]
-    elif count == index:
-        result_odd.append(row)
+            count+=1
+    if count > maxCountOdd:
+        maxCountOdd = count
+        resultOdd = [row]
+    elif count == maxCountOdd:
+        resultOdd.append(row)
 print("Dap an cau f")
-print(np.array(result_odd))
+print(np.array(resultOdd))
