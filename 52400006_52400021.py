@@ -3,9 +3,9 @@ import numpy as np
 A = np.random.randint(1,101,(10,10))
 B = np.random.randint(1,21,(2,10))
 C = np.random.randint(1,21,(10,2))
-print("MA TRAN A: \n",A)
-print("MA TRAN B: \n",B)
-print("MA TRAN C: \n",C)
+# print("MA TRAN A: \n",A)
+# print("MA TRAN B: \n",B)
+# print("MA TRAN C: \n",C)
 
 #Yeu cau a
 print("YEU CAU a")
